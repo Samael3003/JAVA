@@ -1,0 +1,23 @@
+// How to Check if the String Contains 'e' in umbrella
+
+import java.util.Scanner;
+
+public class CheckStringContainE {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String userInput = input.nextLine();
+        input.close();
+
+        int count = 0;
+        for (int i = 0; i < userInput.length(); i++) {
+            if (userInput.charAt(i) == 'e') {
+                count++;
+            }
+        }
+
+        System.out.println("\nString: " + userInput);
+        System.out.println("Contains 'e': " + (userInput.contains("e") ? "Yes" : "No"));
+        System.out.println("Number of 'e': " + count);
+    }
+}
